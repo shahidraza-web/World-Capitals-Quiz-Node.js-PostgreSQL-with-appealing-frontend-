@@ -1,2 +1,73 @@
-# World-Capitals-Quiz-Node.js-PostgreSQL-with-appealing-frontend-
-world
+🌍 World Capitals Quiz – Node.js + Express + PostgreSQL
+
+A simple yet interactive geography quiz application where users guess the capital cities of different countries. Built with Express.js and PostgreSQL, this project demonstrates backend programming, database connectivity, and dynamic rendering using EJS.
+
+🚀 How It Works
+
+1. Database Setup (PostgreSQL)
+A capitals table stores countries and their capital cities.
+When the server starts, it fetches all the data and stores it in memory (quiz array).
+
+2. Random Question Generation
+Every time the user visits the home route (/), the app:
+Resets the score.
+Picks a random question from the quiz array.
+Renders it on the page using EJS.
+
+3. Answer Submission
+When the user submits an answer:
+The server checks if it matches the stored capital (case-insensitive).
+Updates the score if correct.
+Loads the next random question immediately.
+Shows feedback (Correct / Wrong) on the page.
+
+4. Continuous Quiz Flow
+The quiz continues smoothly with each new question.
+
+🧰 Frameworks & Technologies Used
+Backend
+Node.js – runtime environment for the server.
+Express.js – handles routes, form submissions, and rendering responses.
+
+Database
+PostgreSQL – stores country-capital data.
+pg (node-postgres) – used to connect and query the database.
+
+Frontend / Rendering
+EJS (Embedded JavaScript Templates) – renders dynamic content inside HTML.
+CSS + Public folder – serves static files.
+
+Middleware
+body-parser – parses form data from user submissions.
+express.static – serves CSS, images, and other assets.
+
+⭐ Specialties of This Project
+✔ Super lightweight architecture — only uses essential Node modules.
+✔ Real database interaction using PostgreSQL (not static JSON).
+✔ Smooth quiz experience with instant feedback for each answer.
+✔ Randomization logic ensures unique questions each time.
+✔ Clean separation of concerns:
+
+DB logic
+
+Quiz logic
+
+Routing
+
+Rendering
+
+✔ Beginner-friendly project to learn:
+Express routing
+EJS templating
+Database connectivity
+Form handling
+
+✔ Easy to expand — add scores, levels, user accounts, REST APIs, etc.
+
+
+
+
+
+No page reload errors or manual refresh needed.
+
+Score persists during the session.
