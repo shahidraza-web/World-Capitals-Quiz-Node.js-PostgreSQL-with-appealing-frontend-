@@ -1,5 +1,4 @@
 🌍 World Capitals Quiz – Node.js + Express + PostgreSQL
-
 A simple yet interactive geography quiz application where users guess the capital cities of different countries. Built with Express.js and PostgreSQL, this project demonstrates backend programming, database connectivity, and dynamic rendering using EJS.
 
 🚀 How It Works
