@@ -63,6 +63,14 @@ Form handling
 
 ✔ Easy to expand — add scores, levels, user accounts, REST APIs, etc.
 
+Installation Steps — World Capitals Quiz
+Follow these exact, step-by-step instructions to set up the World Capitals Quiz repository locally.
+
+1. Create the PostgreSQL database
+Open a terminal (or PowerShell) and run:
+# create the database named "world"
+createdb world
+
 
 
 
