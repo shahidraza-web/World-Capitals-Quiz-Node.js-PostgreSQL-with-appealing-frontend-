@@ -67,14 +67,45 @@ Installation Steps — World Capitals Quiz
 Follow these exact, step-by-step instructions to set up the World Capitals Quiz repository locally.
 
 1. Create the PostgreSQL database
-Open a terminal (or PowerShell) and run:
-# create the database named "world"
-createdb world
+Open a terminal (or PowerShell) and run: createdb world
+If createdb isn't available, open psql and run:CREATE DATABASE world;
+
+2. Create the capitals table in the world database
+   psql -U postgres -d world -W
+Then run these SQL commands in the psql prompt:
+CREATE TABLE capitals (
+  id SERIAL PRIMARY KEY,
+  country VARCHAR(255),
+  capital VARCHAR(255)
+);
+
+3. Import data from capitals.csv into the capitals table
+\copy capitals(country, capital) FROM 'C:\full\path\to\capitals.csv' WITH CSV HEADER;
+
+5. Update PostgreSQL credentials in your project
+Open your project file (e.g. index.js or wherever you instantiate pg.Client) and set the correct user and password:
+const db = new pg.Client({
+  user: "postgres",         // your postgres username
+  host: "localhost",
+  database: "world",
+  password: "your_password", // <-- set your password here
+  port: 5432,
+});
+6. Open project directory in terminal
+  cd '.\WORLD CAPITAL QUIZ'
+
+8. Install Node dependencies
+   run:npm install
+   
+9. Start the server
+Run:node index.js
+Open the app in your browser
+http://localhost:3000
 
 
 
 
 
-No page reload errors or manual refresh needed.
 
-Score persists during the session.
+
+.
